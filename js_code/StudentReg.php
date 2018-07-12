@@ -54,12 +54,8 @@ body {
 <body>
 
 <div class="topnav">
- 
 </div>
-
-<div class="content">
-  <h2></h2>
-
+<h2></h2>
 <?php
 include 'StudentClass.php';
 $obj=new StudentClass();
@@ -72,12 +68,10 @@ if (name==null || name==" "|| name=="" || isNaN(name) !== true || /^[A-Za-z ]*$/
   alert("Name format Error");
   return false;
 }
-
 else if(age ==null || age=="" || age.length>2 || age < 1 || isNaN(age) ){
   alert("Age format Error");
   return false;
   }
-
 }
 </script>
 <input type="button" value="View Students" height="200" width="1000" onclick= "location.href= 'DisplayPage.php'">
@@ -113,14 +107,8 @@ if ($result) {
 }
 }
 ?>
-
-
-
 </div>
-
 <div class="footer">
-
 </div>
-
 </body>
 </html>

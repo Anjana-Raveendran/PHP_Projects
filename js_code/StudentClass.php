@@ -19,7 +19,7 @@ class StudentClass{
         if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()){
             $arr[]=$row;
-  }
+    }
         }
         return $arr;
     }
@@ -31,22 +31,21 @@ class StudentClass{
        // var_dump($result);
         if($result==true)
         {
-        echo "inserted successfully";
+            echo "inserted successfully";
         }
         else
-        echo "error";
+            echo "error";
     }
 
     function update($name,$age,$id){
         $sql = "UPDATE student_details SET name='$name', age='$age' WHERE id='$id'";
         $result = $this->connection->modify($sql);
-       
         if($result==true)
         {
            return $result;
         }
     }
-    function delete($id){
+    function delete($id) {
         $sql = "DELETE FROM student_details WHERE id='$id'";
         $result = $this->connection->modify($sql);
         return $result;

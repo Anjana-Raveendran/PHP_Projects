@@ -35,10 +35,10 @@ body {
     background-size: 1300px 600px;
 }
 </style>
-<h1>       WELCOME</h1>
-<h2>     </h2>
-<h3>     </h3>
-<h4>      </h4>
+<h1> WELCOME</h1>
+<h2> </h2>
+<h3> </h3>
+<h4> </h4>
 <a href="StudentReg.php" ><input type="button" class="button" value="Add New Student">
 <a href="DisplayPage.php" ><input type="button" class="button" value="Modify Student">
 </form>

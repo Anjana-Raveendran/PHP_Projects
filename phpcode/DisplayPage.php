@@ -52,7 +52,7 @@ foreach($result as $row)
     		<td><label><?php echo $row['name']; ?></label></td>
             <td><label><?php echo $row['age']; ?></label></td>
             <td>  <?php echo "<a href='delete.php? id=",$row['id'],"'>Delete</a>"?></td>
-            <td>  <?php echo "<a href='UpdationPage.php? id=",$row['id'],"'>Update</a>"?></td>    	  </tr>
+            <td>  <?php echo "<a href='UpdationPage.php? id=",$row['id'],"'>Update</a>"?></td> </tr>
     		<?php } ?>
     	</tbody>
     </table>

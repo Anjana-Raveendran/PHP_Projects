@@ -1,6 +1,5 @@
 <html>
 <body>
-
 <?php
 include 'StudentClass.php';
 $obj=new StudentClass();

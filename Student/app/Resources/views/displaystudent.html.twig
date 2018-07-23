@@ -1,0 +1,38 @@
+{% extends 'basestyle.html.twig' %}
+{% block stylesheets %}
+<style>
+</style>
+{%endblock%}
+{% block body %}
+<div class="count">
+    Total : {{ pagination.getTotalItemCount }}
+</div>
+<div align="right">
+    <form action="{{ path('app_student_display') }}" method="get">
+        <label for="filter">Search</label>
+        <input name="filter" type="text">
+        <button type="submit">Search</button>
+    </form>
+</div>
+   <table align="center">
+      <tr>
+         <th>Student Name</th>
+         <th>Age</th>
+         <th>Action</th>
+      </tr>
+      {% for x in pagination %}
+      <tr>
+         <td>{{ x.name }}</td>
+         <td>{{ x.age }}</td>
+         <td><a href = "{{ path('app_student_edit', { 'id' : x.Id }) }}"><button>Edit</button></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+         <a href = "{{ path('app_student_delete', { 'id' : x.Id }) }}"><button>Remove</button></a></td>
+      </tr>
+</div>
+     {% endfor %}
+   </table>
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>
+  {% endblock %}
+   {% block footer %}
+{% endblock %}

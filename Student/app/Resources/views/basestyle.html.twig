@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 700px;
+    margin:auto;
+}
+
+td, th {
+    border: 3px solid #dddddd;
+    text-align: center;
+    padding:8px;
+
+}
+
+td:first-child{
+    text-align:left;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    text-align:center;
+}
+th {
+    padding top:12px;
+    padding bottom:12px;
+    color:white;
+    text-align:center;
+    background-color:#1e90ff;
+}
+     #simpleform {
+         width:500px;
+         border:10px solid white;
+         background-color: white;
+         margin: auto;
+         padding:14px;
+         color:#1e90ff;
+         height:200px;
+
+      }
+      #simpleform label {
+         font-size:14px;
+         float:left;
+         width:300px;
+         text-align:left;
+         display:block;
+      }
+      #simpleform span {
+         font-size:11px;
+         color:grey;
+         width:100px;
+         text-align:right;
+         display:block;
+      }
+      #simpleform input {
+         border:1px solid grey;
+         font-family:verdana;
+         font-size:14px;
+         color:light #1e90ff;
+         height:30px;
+         width:450px;
+         margin: 0 0 10px 10px;
+      }
+      #simpleform textarea {
+         border:1px solid white;
+         font-family:verdana;
+         font-size:14px;
+         color:light #1e90ff;
+         height:500px;
+         width:250px;
+         margin: 0 0 20px 10px;
+      }
+      #simpleform select {
+         margin: 0 0 20px 10px;
+      }
+      #simpleform button {
+         clear:both;
+         margin-left:5px;
+         background: #1e90ff;
+         color: white;
+         border:solid 1px #666666;
+         font-size:16px;
+         width:100px;
+         height:40px;
+         border-radius: 8px;
+      }
+      h1{ 
+          color:#1e90ff;
+      }
+      h2{
+          color: #1e90ff;
+          font-size:20px;
+          text-align:center;
+      }
+      .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#1e90ff;
+    color: white;
+    text-align: center;
+    }
+     button {
+     color:white;
+     background-color:#1e90ff;
+     border-radius: 8px;
+     height:30px;
+     }
+     .Header{
+     color:#1e90ff;
+     font-size:12px;
+     }
+</style>
+</head>
+<body>
+    <div class="Header">
+        <h1>Student Management System</h1>
+    <div align="right">
+<a href = "{{ path('app_student_new') }}"><button>Add New </button></a> 
+<a href = "{{ path('app_student_display') }}"><button>List All </button></a> 
+		</div>
+     </div>
+     <hr width="90%">
+<div class="footer">
+    <p><font size="2">An application for student Management.</font></p>
+</div>
+{% block body %}{% endblock %}
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>
